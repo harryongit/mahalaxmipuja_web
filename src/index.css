@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 0 30% 15%;
+
+    --card: 40 30% 98%;
+    --card-foreground: 0 30% 15%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 0 30% 15%;
+
+    --primary: 28 90% 47%;
+    --primary-foreground: 40 30% 98%;
+
+    --secondary: 0 50% 25%;
+    --secondary-foreground: 40 30% 98%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 0 10% 45%;
+
+    --accent: 42 90% 55%;
+    --accent-foreground: 0 30% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 28 90% 47%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 30% 12%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 28 90% 47%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 0 20% 18%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 0 15% 20%;
+    --sidebar-ring: 28 90% 47%;
+
+    /* Custom tokens */
+    --saffron: 28 90% 47%;
+    --maroon: 0 50% 25%;
+    --gold: 42 90% 55%;
+    --cream: 40 33% 96%;
+    --deep-brown: 0 30% 15%;
+    --warm-gray: 35 10% 60%;
+
+    --gradient-sacred: linear-gradient(135deg, hsl(28 90% 47%), hsl(42 90% 55%));
+    --gradient-divine: linear-gradient(135deg, hsl(0 50% 25%), hsl(28 90% 47%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 30% 12%), hsl(0 50% 25%));
+    --shadow-warm: 0 8px 32px -8px hsl(28 90% 47% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(0 30% 15% / 0.08);
+  }
+
+  .dark {
+    --background: 0 30% 8%;
+    --foreground: 40 20% 90%;
+    --card: 0 25% 12%;
+    --card-foreground: 40 20% 90%;
+    --popover: 0 25% 12%;
+    --popover-foreground: 40 20% 90%;
+    --primary: 28 90% 50%;
+    --primary-foreground: 0 30% 8%;
+    --secondary: 0 40% 35%;
+    --secondary-foreground: 40 20% 90%;
+    --muted: 0 15% 18%;
+    --muted-foreground: 35 10% 55%;
+    --accent: 42 85% 50%;
+    --accent-foreground: 0 30% 8%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 20% 90%;
+    --border: 0 15% 20%;
+    --input: 0 15% 20%;
+    --ring: 28 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient-sacred {
+    background: var(--gradient-sacred);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-sacred {
+    background: var(--gradient-sacred);
+  }
+
+  .bg-gradient-divine {
+    background: var(--gradient-divine);
+  }
+
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
