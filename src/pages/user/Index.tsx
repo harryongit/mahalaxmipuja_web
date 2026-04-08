@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PujaCard from "@/components/PujaCard";
 import { Shield, CheckCircle, Star, Users, Heart } from "lucide-react";
-
+import heroVideo from "../../assets/hero_video.mp4";
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
@@ -33,7 +33,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Shri Mahalaxmi Mandir Kolhapur" className="w-full h-full object-cover" width={1920} height={1080} />
+          <video src={heroVideo} autoPlay muted loop  className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
         </div>
         <div className="container relative z-10">
